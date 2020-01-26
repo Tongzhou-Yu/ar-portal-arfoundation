@@ -15,9 +15,9 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogColor: {r: 0.9433962, g: 0.8513385, b: 0.7075472, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.02
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -228,7 +228,7 @@ PrefabInstance:
     - target: {fileID: 1066744981719265354, guid: 32884c46111dd654ea4cbe4d921efc5f,
         type: 3}
       propertyPath: near clip plane
-      value: 0.3
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 1066744981719265356, guid: 32884c46111dd654ea4cbe4d921efc5f,
         type: 3}
@@ -313,7 +313,7 @@ PrefabInstance:
     - target: {fileID: 56506617344736198, guid: 08a18475cf1a872479886d74e059a952,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 56506617344736225, guid: 08a18475cf1a872479886d74e059a952,
         type: 3}
@@ -438,6 +438,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ARPortal 360Video
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357459195215314872, guid: 405fbdb5c9d997141874da886f70aedc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 405fbdb5c9d997141874da886f70aedc, type: 3}

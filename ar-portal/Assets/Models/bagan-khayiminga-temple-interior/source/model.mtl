@@ -1,0 +1,14 @@
+# 
+# Wavefront material file
+# Created in RealityCapture v1.0.3.3943
+# www.capturingreality.com
+# 
+
+
+newmtl model_Material_u1_v1
+Ka 1 1 1
+Kd 1 1 1
+d 1
+Ns 0
+illum 1
+map_Kd tex_u1_v1.jpg
