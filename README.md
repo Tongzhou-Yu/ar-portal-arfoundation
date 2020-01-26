@@ -6,7 +6,8 @@ This repository contains an Unity example project about creating Augmented Reali
 Read the whole tutorial in my website here: https://yuuuuu.net/2018/02/08/augmented-reality-portal-in-vuforia-arkit-and-arfoundation/
 
 ## Basic Scene
-![b9117e32f5f208b03c91b6e836b06de3_4](https://user-images.githubusercontent.com/45578227/73118673-367a9600-3f92-11ea-95a4-c33b60540b20.gif)
+![58777dce2fbd4ffd9dab7f1760481bec](https://user-images.githubusercontent.com/45578227/73136308-33150680-4087-11ea-9c98-84250aa008b6.gif)
+
 
 ## 360 Video Scene
 ![1d64ef7849ee69eab8abc750d4f52915](https://user-images.githubusercontent.com/45578227/73132220-f4fdef80-4052-11ea-9131-a1dd47b49973.gif)
