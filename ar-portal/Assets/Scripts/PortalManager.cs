@@ -18,12 +18,12 @@ public class PortalManager : MonoBehaviour
     bool wasInFront;
     bool inOtherWorld;
 
+    bool hasCollided;
+
     // Start is called before the first frame update
     void Start()
     {
-
         SetMaterials(false);
-
     }
 
     void SetMaterials(bool fullRender)
@@ -40,8 +40,9 @@ public class PortalManager : MonoBehaviour
     bool GetIsInFront()
     {
         GameObject MainCamera = GameObject.FindGameObjectWithTag("MainCamera");
-        camPostionInPortalSpace = transform.InverseTransformPoint(MainCamera.transform.position);
-        return camPostionInPortalSpace.y >= 0.01 ? true : false;
+        Vector3 worldPos = MainCamera.transform.position + MainCamera.transform.forward * Camera.main.nearClipPlane;
+        camPostionInPortalSpace = transform.InverseTransformPoint(worldPos);
+        return camPostionInPortalSpace.y >= 0 ? true : false;
     }
 
     private void OnTriggerEnter(Collider collider)
@@ -50,14 +51,22 @@ public class PortalManager : MonoBehaviour
         if (collider.transform != MainCamera.transform)
             return;
         wasInFront = GetIsInFront();
+        hasCollided = true;
 
     }
 
     // Update is called once per frame
-    void OnTriggerStay(Collider collider)
+    void OnTriggerExit(Collider collider)
     {
         GameObject MainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         if (collider.transform != MainCamera.transform)
+            return;
+        hasCollided = false;
+    }
+
+    void whileCameraColliding()
+    {
+        if (!hasCollided)
             return;
         bool isInFront = GetIsInFront();
         if ((isInFront && !wasInFront) || (wasInFront && !isInFront))
@@ -66,12 +75,16 @@ public class PortalManager : MonoBehaviour
             SetMaterials(inOtherWorld);
         }
         wasInFront = isInFront;
-
     }
 
     private void OnDestroy()
     {
         SetMaterials(true);
+    }
+
+    private void Update()
+    {
+        whileCameraColliding();
     }
 
 }
