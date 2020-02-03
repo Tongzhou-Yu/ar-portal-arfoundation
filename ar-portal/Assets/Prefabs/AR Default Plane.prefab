@@ -212,8 +212,8 @@ LineRenderer:
       m_Mode: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 4
-    numCapVertices: 4
+    numCornerVertices: 2
+    numCapVertices: 2
     alignment: 0
     textureMode: 0
     shadowBias: 0.5
