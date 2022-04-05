@@ -1,6 +1,6 @@
 ﻿// (c) 2020 Tongzhou Yu
 
-Shader "Custom/StencilMetallic"
+Shader "Portal/StencilMetallic"
 {
     Properties
     {

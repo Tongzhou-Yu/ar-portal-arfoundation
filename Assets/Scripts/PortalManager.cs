@@ -8,8 +8,6 @@ using UnityEngine.Rendering;
 public class PortalManager : MonoBehaviour
 {
 
-    public GameObject InnerWorld;
-
     //This materials matter needs to be optimizated!
     public Material[] materials;
 
