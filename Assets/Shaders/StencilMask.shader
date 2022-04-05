@@ -2,6 +2,11 @@
 
 Shader "Portal/StencilMask"
 {
+	Properties
+	{
+		_Ref("World", Int)=1
+	}
+
 	SubShader
 	{
 		Tags { "RenderType" = "Opaque" }
@@ -13,7 +18,7 @@ Shader "Portal/StencilMask"
 		Pass
 		{
 			Stencil{
-				Ref 1
+				Ref [_Ref]
 				Comp always
 				Pass replace
 			}

@@ -44,6 +44,8 @@ Shader "Portal/StencilSpecular"
             [HideInInspector] _SrcBlend("__src", Float) = 1.0
             [HideInInspector] _DstBlend("__dst", Float) = 0.0
             [HideInInspector] _ZWrite("__zw", Float) = 1.0
+
+            _Ref("World", Int)=1
     }
 
         CGINCLUDE
@@ -56,7 +58,7 @@ Shader "Portal/StencilSpecular"
             LOD 300
 
                     Stencil{
-                        Ref 1
+                        Ref [_Ref]
                         Comp[_StencilComp]
                     }
 
@@ -229,7 +231,7 @@ Shader "Portal/StencilSpecular"
             LOD 150
 
                     Stencil{
-                        Ref 1
+                        Ref [_Ref]
                         Comp[_StencilComp]
                     }
             // ------------------------------------------------------------------
