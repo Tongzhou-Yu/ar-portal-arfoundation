@@ -6,9 +6,12 @@ using UnityEngine.Rendering;
 public class InteractiveStencilMaterial : MonoBehaviour
 {
     bool inOtherWorld;
+    bool hasTriggered;
+
     void Start()
     {
         SetMaterials(false);
+        Debug.Log(hasTriggered);
     }
 
     void SetMaterials(bool fullRender)
@@ -18,13 +21,28 @@ public class InteractiveStencilMaterial : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider collider)
+    private void OnTriggerEnter(Collider portal)
     {
         //the tag of Portal Gameobject need to be set as Portal 
-        if(collider.tag == "Portal") 
+        if(hasTriggered == false && portal.tag == "Portal") 
         {
             inOtherWorld = !inOtherWorld;
             SetMaterials(inOtherWorld);
+            Debug.Log(hasTriggered);
+        }
+    }
+
+    private void OnTriggerExit(Collider portal)
+    {
+        if(portal.tag == "Portal")
+        {
+            if(hasTriggered == true)
+            {
+                inOtherWorld = !inOtherWorld;
+                SetMaterials(inOtherWorld);
+            }
+            hasTriggered = !hasTriggered;
+            Debug.Log(hasTriggered);
         }
     }
 
