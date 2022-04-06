@@ -5,6 +5,7 @@ Shader "Portal/StencilMetallic"
     Properties
     {
         [Enum(CompareFunction)] _StencilComp("Stencil Comp", Int) = 3
+        _Ref("World", Int)=1
 
 
         _Color("Color", Color) = (1,1,1,1)
@@ -48,7 +49,7 @@ Shader "Portal/StencilMetallic"
             [HideInInspector] _DstBlend("__dst", Float) = 0.0
             [HideInInspector] _ZWrite("__zw", Float) = 1.0
 
-            _Ref("World", Int)=1
+            
     }
 
         CGINCLUDE

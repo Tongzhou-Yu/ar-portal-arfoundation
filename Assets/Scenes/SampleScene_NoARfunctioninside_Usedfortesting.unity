@@ -502,8 +502,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ff8f4371429bbe4fa130ef52437b672, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materials:
-  - {fileID: 2100000, guid: b128fdbc5804f6e4a9e2828bcb7dfe53, type: 2}
 --- !u!135 &1083522835
 SphereCollider:
   m_ObjectHideFlags: 0
