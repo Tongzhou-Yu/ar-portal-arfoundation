@@ -13,7 +13,7 @@ Shader "Portal/StencilMask"
 		LOD 100
 		Zwrite Off
 		ColorMask 0
-				Cull off
+		Cull off
 
 		Pass
 		{

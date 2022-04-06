@@ -5,6 +5,7 @@ Shader "Portal/innerSky"
     Properties
     {
         [Enum(CompareFunction)] _StencilComp("Stencil Comp",Int) = 3
+        _Ref("World", Int)=1
 		_MainTex("Texture", 2D) = "white" {}
         [Enum(UV0,0,UV1,1)] _UVSec("UV Set for secondary textures", Float) = 0
     }
@@ -18,7 +19,7 @@ Shader "Portal/innerSky"
         Pass
         {
 			Stencil{
-			Ref 1
+			Ref [_Ref]
 			Comp[_StencilComp]
 		}
             CGPROGRAM
